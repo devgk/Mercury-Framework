@@ -1,4 +1,4 @@
-# MercuryFrameWork
+# Mercury FrameWork
 
 A very lightweight, responsive, device independent css framework for webapps. 
 
