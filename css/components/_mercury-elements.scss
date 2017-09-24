@@ -1,0 +1,317 @@
+//Section Nav
+section_nav {
+  display:            block;
+  position:           fixed;
+  right:              -100px;
+  top:                50%;
+  background-color:   #131515;
+  width:              auto;
+  height:             auto;
+  z-index:            999;
+  padding:            6px 5px;
+  border-radius:      4px 0 0 4px;
+  overflow:           hidden;
+  opacity:            0.8;
+  -webkit-transition: all .6s ease-out;
+  transition:         all .6s ease-out;
+
+  a {
+    height:   24px;
+    width:    24px;
+    display:  block;
+    overflow: hidden;
+    color:    transparent;
+    position: relative;
+
+    span.doticon {
+      width:              12px;
+      height:             12px;
+      border:             2px solid #131515;
+      background-color:   #fff;
+      display:            inline-block;
+      margin:             4px;
+      -webkit-box-shadow:         0 0 0 2px rgba(255, 255, 255, 0);
+              box-shadow:         0 0 0 2px rgba(255, 255, 255, 0);
+      border-radius:      50%;
+      -webkit-transition: all .1s linear;
+      transition:         all .1s linear;
+    }
+    .dot:hover span.doticon {
+      -webkit-box-shadow:         0 0 0 2px #fff;
+              box-shadow:         0 0 0 2px #fff;
+      -webkit-transition: all .1s linear;
+      transition:         all .1s linear;
+    }
+  }
+}
+
+
+
+//Unordered Smart List
+ul.smart-list {
+    padding-left: 0;
+
+    > li {
+        position: relative;
+        height: auto;
+        min-height: 30px;
+        line-height: 30px;
+        padding: 0 0 0 1.3em;
+        margin-bottom: 10px;
+        margin-left: 30px;
+        text-transform: capitalize;
+        list-style: none;
+
+        > span {
+            line-height: 30px;
+        }
+    }
+
+    > li:before {
+        content: "\e904";
+        font-family: "weicon";
+        display: inline-block;
+        width: 40px;
+        margin-left: -30px;
+        font-size: 30px;
+        float: left;
+    }
+}
+
+
+
+// Sliding Pricing Table
+.sliding-table {
+    width: auto;
+    max-width: 100%;
+    margin: 0 !important;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear; //Table Container
+
+    .table-container {
+        padding: 10px;
+
+        .pricing-table {
+            width: 100%;
+            background-color: #fff;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.4); //Table Row
+
+            tr {
+                background-color: #ECF0F1; //Table Head
+
+                th {
+                    overflow: hidden;
+                    position: relative;
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    background-color: #16A085;
+
+                    .table-cover {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        float: left;
+                        opacity: 0.3;
+                        z-index: 1;
+                    }
+
+                    h3 {
+                        display: block;
+                        position: relative;
+                        color: #f7f7f7;
+                        padding: 20px 10px;
+                        background-color: rgba(0,0,0,0.2);
+                        z-index: 9;
+                        box-shadow: 0 -1px 2px rgba(0,0,0,0.2) inset;
+                        margin: 0;
+                    }
+
+                    .table-price {
+                        color: #f7f7f7;
+                        font-size: 60px;
+                        display: block;
+                        position: relative;
+                        margin: 0;
+                        padding: 20px 10px;
+                        text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+                        z-index: 9;
+
+                        sub,
+                        sup {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            //Table Data
+            td {
+                text-align: center;
+                padding: 10px;
+            }
+
+            tr:nth-child(odd) {
+                td {
+                    background-color: rgba(0,0,0,0.1);
+                }
+            }
+        }
+    }
+
+    //Sliding Table navigation
+    .slick-prev, .slick-next {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 4px;
+        z-index: 9;
+    }
+    .slick-prev {
+        left: -40px;
+    }
+    .slick-next {
+        right: -40px;
+    }
+    //Sliding Table navigation pseudo elements
+    .slick-prev:before, .slick-next:before {
+        font-family: 'weicon';
+        font-size: 30px;
+        line-height: 40px;
+        opacity: 1;
+        display: block;
+        //SLIDING NAV COLOR
+        background-color: #26495A;
+        color: #fff;
+    }
+
+    .slick-prev:before {
+        content: '\f137';
+        border-radius: 4px 0 0 4px;
+    }
+    .slick-next:before {
+        content: '\f138';
+        border-radius: 0 4px 4px 0;
+    }
+
+    //Sliding Dots
+    ul.slick-dots {
+      height: auto;
+      overflow: auto;
+      bottom: -40px;
+
+      li{
+        width: auto;
+        height: auto;
+        margin: 0;
+
+        button {
+            position: relative;
+            width: auto;
+            height: auto;
+            display: inline-block;
+        }
+        button::before {
+            font-size: 0;
+            border-radius: 50%;
+            margin: auto 4px;
+            position: relative;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            box-shadow: 0 0 0 4px transparent;
+            background: #555;
+        }
+      }
+      li.slick-active{
+        button:before {
+          box-shadow: 0 0 0 3px #555;
+        }
+      }
+    }
+}
+.sliding-table.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+
+
+// Accordion
+.accordion{
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto 20px;
+
+  li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    .tabHead{
+      background-color: #2C3E50;
+      margin-bottom: 5px;
+      border-radius: 4px;
+      overflow: hidden;
+
+      #tab {
+       padding: 10px;
+       margin: 0;
+       color: #ccc;
+       cursor: pointer;
+       display: block;
+       cursor: pointer;
+       font-weight: bold;
+       font-size: 16px;
+       line-height: 20px;
+       user-select: none;
+       text-align: left;
+       border-radius: 4px 4px 5px 5px;
+       overflow: hidden;
+     }
+     #tab:before {
+       width: 6px;
+       height: 6px;
+       border-right: 2px solid #aaa;
+       border-bottom: 2px solid #aaa;
+       position: absolute;
+       right: 10px;
+       content: " ";
+       top: 15px;
+       transform: rotate(-45deg);
+       -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+       transition: all 0.2s ease-in-out;
+     }
+     #tab.activetab:before {
+       transform: rotate(45deg);
+       -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+       transition: all 0.2s ease-in-out;
+     }
+    }
+
+    p {
+      display: none;
+      padding: 10px 10px 20px;
+      text-align: justify;
+      margin: 0;
+      color: #eee;
+    }
+  }
+}
+.accordion.dark{
+  //Dark Style to
+}

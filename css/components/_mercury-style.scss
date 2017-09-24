@@ -1,0 +1,86 @@
+h1, h2, h3, h4, h5, h6, a {
+  color: #444;
+}
+p {
+  color: #555;
+}
+
+.whiteText {
+  color: #f7f7f7;
+}
+p.whiteText {
+  color: #ddd;
+}
+
+.button.primary {
+  background-color: #F39C12;
+  color: #fff;
+  font-weight: bold;
+}
+.button.secondary {
+  background-color: #2C3E50;
+  color: #fff;
+}
+.button.cancel {
+  background-color: #C0392B;
+  color: #fff;
+}
+.button.safe {
+  background-color: #16A085;
+  color: #fff;
+}
+.button.primary span, .button.secondary span, .button.cancel span, .button.safe span {
+  color: #fff;
+}
+
+
+.textureCover,
+.darkFade,
+.lightFade,
+.noise {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.textureCover>div,
+.darkFade>div,
+.lightFade>div,
+.noise>div {
+    position: relative;
+}
+
+.textureCover::before,
+.darkFade::before,
+.lightFade::before,
+.noise::before {
+    content: "";
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    min-height: 100%;
+}
+
+.darkFade::before {
+    background-color: rgba(0,0,0,0.4);
+}
+.lightFade::before {
+    background-color: rgba(255,255,255,0.4);
+}
+.noise::before{
+    background-image: url(../media/noise.png) rgba(0,0,0,0.4);
+}
+.backgroundImage, .backgroundImageTop {
+    background-size: cover;
+    background-position: center center;
+}
+.backgroundImageTop {
+    background-position: center top;
+}
+
+.textureCover::before {
+    background-size: 250px;
+}

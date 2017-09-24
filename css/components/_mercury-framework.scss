@@ -1,0 +1,382 @@
+// Mercury Framework - Basic Style Comonent
+// Version 1.0.3
+// Creator: Gaurav Kumar
+
+
+
+
+//Container Tag
+container {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+//Section Tag
+section {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #f7f7f7;
+
+  >content {
+    display: block;
+    position: relative;
+    padding: 60px 0;
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+  //Compact Without Paddings
+  >content.compact {
+    padding: 0;
+    overflow: hidden;
+  }
+  //Floww to expand full width and height
+  >content.flow {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: 0;
+
+    //Inner Content of flow
+    .contained{
+       padding: 60px 0;
+       max-width: 1280px;
+       margin: 0 auto;
+    }
+  }
+}
+
+
+//Mercury Styling
+.mercury {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  span>.content {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+  div.content {
+    margin: 10px;
+  }
+}
+
+//Layout Styleing
+.verticalyCenter {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  margin: 0 auto;
+  padding: 0;
+}
+.floating {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+section>content>.mercury,
+section>content>.verticalyCenter>.mercury,
+section>content>.floating>.mercury {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 546px) {
+  section>content>.mercury, section>content>.verticalyCenter>.mercury, section>content>.floating>.mercury {
+    width: 95%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  section>content>.mercury, section>content>.verticalyCenter>.mercury, section>content>.floating>.mercury {
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+
+//Mislaneous Classes
+.max750 {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+//Grid System
+.grid, .grids {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+//Grid System Responsive
+@media (min-width: 768px) {
+  .grid, .grids {
+    margin-left: 4%;
+  }
+  .grid:first-child, .grids:first-child {
+    margin-left: 0;
+  }
+  .one.grid, .one.grids {
+    width: 4.66666666667%;
+  }
+  .two.grids {
+    width: 13.3333333333%;
+  }
+  .three.grids {
+    width: 22%;
+  }
+  .four.grids {
+    width: 30.6666666667%;
+  }
+  .five.grids {
+    width: 39.3333333333%;
+  }
+  .six.grids {
+    width: 48%;
+  }
+  .seven.grids {
+    width: 56.6666666667%;
+  }
+  .eight.grids {
+    width: 65.3333333333%;
+  }
+  .nine.grids {
+    width: 74.0%;
+  }
+  .ten.grids {
+    width: 82.6666666667%;
+  }
+  .eleven.grids {
+    width: 91.3333333333%;
+  }
+  .twelve.grids {
+    width: 100%;
+    margin-left: 0;
+  }
+  /* Offsets */
+  .offset-by-one.grid, .offset-by-one.grids {
+    margin-left: 8.66666666667%;
+  }
+  .offset-by-two.grid, .offset-by-two.grids {
+    margin-left: 17.3333333333%;
+  }
+  .offset-by-three.grid, .offset-by-three.grids {
+    margin-left: 26%;
+  }
+  .offset-by-four.grid, .offset-by-four.grids {
+    margin-left: 34.6666666667%;
+  }
+  .offset-by-five.grid, .offset-by-five.grids {
+    margin-left: 43.3333333333%;
+  }
+  .offset-by-six.grid, .offset-by-six.grids {
+    margin-left: 52%;
+  }
+  .offset-by-seven.grid, .offset-by-seven.grids {
+    margin-left: 60.6666666667%;
+  }
+  .offset-by-eight.grid, .offset-by-eight.grids {
+    margin-left: 69.3333333333%;
+  }
+  .offset-by-nine.grid, .offset-by-nine.grids {
+    margin-left: 78.0%;
+  }
+  .offset-by-ten.grid, .offset-by-ten.grids {
+    margin-left: 86.6666666667%;
+  }
+  .offset-by-eleven.grid, .offset-by-eleven.grids {
+    margin-left: 95.3333333333%;
+  }
+}
+
+
+
+//Cards System
+.smallCards>.card, .cards>.card {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+  padding: 0;
+}
+.smallCards>.card {
+  max-width: 250px;
+}
+.cards>.card {
+  width: 330px;
+}
+/*Card Theme*/
+.cards>.card.whiteBase, .smallCards>.card.whiteBase {
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.4);
+}
+
+
+
+//Fluid Boxes [3 Box System]
+.fluidBoxes {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+.fluidBoxes .fluid {
+  width: 33.3%;
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+}
+.fluidBoxes .fluid>div {
+  max-width: 100%;
+  margin-left: 10px;
+}
+.fluidBoxes .fluid:nth-child(3)>div {
+  margin-right: 10px;
+}
+@media only screen and (max-width: 992px) {
+  .fluidBoxes .fluid {
+    width: 50%;
+    display: inline-block;
+    margin-right: -4px;
+  }
+  .fluidBoxes .fluid:nth-child(2)>div {
+    margin-right: 10px;
+  }
+  .fluidBoxes .fluid:nth-child(3) {
+    display: block;
+    margin: 20px auto 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .fluidBoxes .fluid {
+    width: 100%;
+    display: block;
+    margin: 20px auto 0;
+  }
+  .fluidBoxes .fluid:nth-child(3) {
+    margin: 20px auto;
+  }
+  .fluidBoxes .fluid>div {
+    display: block;
+    margin: 0 10px;
+  }
+}
+
+
+
+//Banner System
+.mercury.banner {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mercury.banner .imagebox, .mercury.banner .fluid {
+  display: inline-block;
+  width: 49%;
+  position: relative;
+  height: auto;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+.mercury.banner>.fluid>div {
+  margin-left: 10px;
+}
+.mercury.banner.reverse {
+  direction: rtl;
+}
+.mercury.banner.reverse>.fluid>div {
+  margin-right: 10px;
+  margin-left: 0;
+}
+@media only screen and (max-width: 768px) {
+  /*Banner imagebox and fluid*/
+  .mercury.banner {
+    text-align: center;
+  }
+  .mercury.banner .imagebox {
+    width: 100%;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+  .mercury.banner .fluid {
+    width: 100%;
+    margin: 0;
+  }
+  .mercury.banner>.fluid>div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mercury.banner .fluid .whiteText, .mercury.banner .fluid .darkText, .mercury.banner .fluid .underline.whiteText::after, .mercury.banner .fluid .underline.darkText::after {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+//Right Sidebar Layout
+section>content>.right-sidebar{
+  width: 100%;
+  padding: 0;
+
+  .content, .sidebar{
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin: 0;
+  }
+  .content{
+      width: 69%;
+  }
+  .sidebar{
+      width: 30%;
+  }
+}
+@media only screen and (max-width: 768px){
+  section>content>.right-sidebar{
+    .content, .sidebar{
+      float: none;
+      display: block;
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+
+
+//must be moved to webenfolds
+.mercury.banner.reverse i.icon-dot {
+  font-size: 10px;
+  margin-right: -5px;
+  color: #444;
+}
+.mercury.banner.reverse .whiteText i.icon-dot {
+  color: #fff;
+}
