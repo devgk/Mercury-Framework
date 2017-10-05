@@ -100,13 +100,6 @@ section>content>.floating>.mercury {
   padding-left: 10px;
   padding-right: 10px;
 }
-@media (min-width: 546px) {
-  section>content>.mercury, section>content>.verticalyCenter>.mercury, section>content>.floating>.mercury {
-    width: 95%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
 @media (min-width: 768px) {
   section>content>.mercury, section>content>.verticalyCenter>.mercury, section>content>.floating>.mercury {
     width: 90%;

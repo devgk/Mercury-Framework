@@ -279,7 +279,7 @@ span.large, span.extraLarge, span.largeCompact, span.extraLargeCompact {
 }
 
 //tag must be moved to webenfolds-theme
-h1 tag,h2 tag,h3 tag,h4 tag,h5 tag,h6 tag,p tag {
+h1 tag,h2 tag,h3 tag,h4 tag,h5 tag,h6 tag,p tag, tag a {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -397,7 +397,7 @@ p.justify, p.left, p.right, p.center {
 //Elements
 //Space
 space{
-    display: inline-block;
+    display: block;
     width: 100%;
     background: transparent;
     height: 5px;
